@@ -127,14 +127,14 @@ export default function Preview (props) {
         <View style={styles.leftBottomView} >
           {props.state.courses.length > 0 && <figure style={styles.figure}>
             <figcaption style={styles.figCaption}>Education</figcaption>
-          <ul className="list-group list-group-flush">
+          <ul style={styles.listGroup} >
           {props.state.courses.map((c, i) => {
-             return (<li className="list-group-item mb-2" key={i}>
-                 <div>
-                    <p className="mb-1">{c.org}</p>
-                    <p className="mb-1 fw-bold">{c.name}</p>
-                    <small className="fst-italic">{c.dates}</small>
-                 </div>
+             return (<li style={styles.listGroupItem} key={i}>
+                 <View>
+                    <Text style={{marginBottom: ".25rem"}}>{c.org}</Text>
+                    <Text style={{marginBottom: ".25rem", fontWeight: "bold"}} >{c.name}</Text>
+                    <Text style={{fontSize: ".875rem", fontStyle: "italic"}} >{c.dates}</Text>
+                 </View>
                </li>
              );
           })}
