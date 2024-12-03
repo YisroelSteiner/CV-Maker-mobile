@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, Image, Button } from "react-native";
+import { View, Text, Image, Button, StyleSheet } from "react-native";
+import { styles, colors } from "./styles/main";
 
 export default function Preview (props) {
   return (<View style={{flex: 7}}>
@@ -95,7 +96,7 @@ export default function Preview (props) {
       </View>
     </View>
     <View style={{textAlign: "center", marginVertical: "3rem"}}>
-      <Button style={{paddingVertical: ".5rem", paddingHorizontal: "1rem", fontSize: "1.25rem", borderRadius: ".5rem", backgroundColor: "#0d6efd", fontWeight: 400, lineHeight: "1.5", textAlign: "center"}} onClick={props.state.downloadHtml2Pdf}>Save</Button>
+      <Button style={StyleSheet.compose(styles.btn, {backgroundColor: colors.primary, paddingVertical: ".5rem", paddingHorizontal: "1rem", fontSize: "1.25rem", borderRadius: ".5rem"})} onClick={props.state.downloadHtml2Pdf}>Save</Button>
     </View>  
   </View>)
 }
