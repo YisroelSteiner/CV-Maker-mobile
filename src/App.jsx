@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Preview from "./Preview.jsx";
 import { View, Text, Image, Button, StyleSheet } from "react-native";
 import { styles, colors } from "./styles/main.js";
@@ -199,7 +199,7 @@ export default function App () {
                         {skills.map((s, i) => {
                           return i < skills.length - 1 ? (<li style={{padding: "0.5rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "start"}} key={i}><Text style={{display: "inline", marginLeft: ".5rem", marginRight: "auto"}} >{s}</Text>
                             <Button style={StyleSheet.compose(styles.btn, {backgroundColor: colors.danger,  paddingHorizontal: "0.75rem", paddingVertical: "0.375rem", fontSize: "1rem", borderRadius: ".375rem"})} onClick={() => removeSkill(i)}>x</Button>
-                          </li>) : (<li style={{padding: "0.5rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "start", borderBottom: "1px solid #dee2e6"}} key={i}><Text style={{display: "inline", marginLeft: ".5rem", marginRight: "auto"}} >{s}</Text>
+                          </li>) : (<li style={{padding: "0.5rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "start", borderBottom: "1 solid #dee2e6"}} key={i}><Text style={{display: "inline", marginLeft: ".5rem", marginRight: "auto"}} >{s}</Text>
                             <Button style={StyleSheet.compose(styles.btn, {backgroundColor: colors.danger,  paddingHorizontal: "0.75rem", paddingVertical: "0.375rem", fontSize: "1rem", borderRadius: ".375rem"})} onClick={() => removeSkill(i)}>x</Button>
                           </li>);})}
                       </ol> }
@@ -220,7 +220,7 @@ export default function App () {
                             {lang.level ? lang.level : ""}
                           </View>
                           <Button style={StyleSheet.compose(styles.btn, {backgroundColor: colors.danger, paddingHorizontal: "0.75rem", paddingVertical: "0.375rem", fontSize: "1rem", borderRadius: ".375rem", marginVertical: "auto"})} onClick={() => removeLanguage(i)}>x</Button>
-                        </li> ) : (<li style={{padding: "0.5rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "start", borderBottom: "1px solid #dee2e6"}} key={i} >
+                        </li> ) : (<li style={{padding: "0.5rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "start", borderBottom: "1 solid #dee2e6"}} key={i} >
                           <View style={{marginLeft: ".5rem", marginRight: "auto"}}>
                             <View style={{fontWeight: "bold"}} >{lang.lang}</View>
                             {lang.level ? lang.level : ""}
@@ -240,7 +240,7 @@ export default function App () {
                     <figcaption style={{marginBottom: "1rem", fontSize:"1.25rem", fontWeight: 300}}>Education</figcaption>
                     {courses.length > 0 && <ul style={{marginBottom: "1rem", listStyleType: "none"}}>
                       {courses.map((c, i) => {
-                         return (<li style={{padding: ".5rem 1rem", backgroundColor: rgba(248, 249, 250, 1), marginBottom: "1rem", border: "1px solid #dee2e6", borderRadius: ".375rem"}}  key={i}>
+                         return (<li style={{padding: ".5rem 1rem", backgroundColor: rgba(248, 249, 250, 1), marginBottom: "1rem", border: "1 solid #dee2e6", borderRadius: ".375rem"}}  key={i}>
                              <View style={{display: "flex", flexDirection: "row", gap: ".25rem"}}>
                                <View style={{flex: 8}}>
                                 <Text style={{marginBottom: ".25rem"}} >{c.org}</Text>
@@ -255,7 +255,7 @@ export default function App () {
                          );
                       })}
                       </ul>}
-                      <View style={{marginBottom: "1rem", padding: ".5rem", border:"1px solid #dee2e6"}}>
+                      <View style={{marginBottom: "1rem", padding: ".5rem", border:"1 solid #dee2e6"}}>
                         <input value={courseOrg} onChange={e => setCourseOrg(e.target.value)} id="ed-org-input" type="text" style={StyleSheet.compose(styles.formControl, {marginBottom: ".25rem"})} placeholder="Organization" required/>  
                         <input value={course} onChange={e => setCourse(e.target.value)} id="ed-name-input" type="text" style={StyleSheet.compose(styles.formControl, {marginBottom: ".25rem"})} placeholder="Name of the degree/course" required/>        
                         <View style={{position: "relative", display: "flex", flexWrap: "wrap", alignItems: "stretch", width: "100%"}} >
@@ -274,7 +274,7 @@ export default function App () {
                     {workplaces.length > 0 && <ul style={{marginBottom: "1rem", listStyleType: "none"}}>
                       {workplaces.map((j, i) => {
                          return (
-                           <li style={{padding: ".5rem 1rem", backgroundColor: rgba(248, 249, 250, 1), marginBottom: "1rem", border: "1px solid #dee2e6", borderRadius: ".375rem"}} key={i}>
+                           <li style={{padding: ".5rem 1rem", backgroundColor: rgba(248, 249, 250, 1), marginBottom: "1rem", border: "1 solid #dee2e6", borderRadius: ".375rem"}} key={i}>
                              <View style={{display: "flex", flexDirection: "row", gap: ".25rem"}}>
                                <View style={{flex: 7}}>
                                 <Text style={{marginBottom: ".25rem", fontWeight: "bold"}}>{j.workplace}</Text>
@@ -290,7 +290,7 @@ export default function App () {
                          );
                       })}
                       </ul>}
-                      <View style={{marginBottom: "1rem", padding: ".5rem", border: "1px solid #dee2e6"}}>
+                      <View style={{marginBottom: "1rem", padding: ".5rem", border: "1 solid #dee2e6"}}>
                         <input value={workplace} onChange={e => setWorkplace(e.target.value)} id="workplace-input" type="text" style={StyleSheet.compose(styles.formControl, {marginBottom: ".25rem"})} placeholder="Organization" required/>  
                         <input value={position} onChange={e => setPosition(e.target.value)} id="position-input" type="text" style={StyleSheet.compose(styles.formControl, {marginBottom: ".25rem"})} placeholder="Position" required/>
                         <textarea value={jobDescription} onChange={e => setJobDescription(e.target.value)} name="job-description" id="job-description-textarea" style={styles.formControl} rows="4" placeholder="Tell about your experience"></textarea>        

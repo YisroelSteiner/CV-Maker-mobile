@@ -12,13 +12,13 @@ export const styles = StyleSheet.create({
       appearance: "none",
       backgroundColor: "#fff",
       backgroundClip: "padding-box",
-      border: "1px solid #dee2e6",
+      border: "1 solid #dee2e6",
       borderRadius: "0.375rem"
     },
     imgThumbnail: {
       padding: ".25rem",
       backgroundColor: "#fff",
-      border: "1px solid #dee2e6",
+      border: "1 solid #dee2e6",
       borderRadius: "0.375rem",
       maxWidth: "100%",
       height: "auto"
@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
       textAlign: "center",
       whiteSpace: "nowrap",
       backgroundColor: "#f8f9fa",
-      border: "1px solid #dee2e6",
+      border: "1 solid #dee2e6",
       borderRadius: ".375rem"}
   });
   

@@ -1,7 +1,6 @@
 'use strict'
 
 const path = require("path");
-const autoprefixer= require("autoprefixer");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -14,6 +13,9 @@ output: {
   filename: '[name].bundle[contenthash].js',
   clean: true,
   assetModuleFilename: '[name][ext]'
+},
+resolve: {
+  extensions: ['.js', '.jsx'],
 },
 devServer: {
   static: {

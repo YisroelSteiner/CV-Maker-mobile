@@ -4,7 +4,7 @@ import { styles, colors } from "./styles/main";
 
 export default function Preview (props) {
   return (<View style={{flex: 7}}>
-    <View style={{padding: "1rem", border: "solid 1px black", flex: 12}} id={props.id}>
+    <View style={{padding: "1rem", border: "1 solid black", flex: 12}} id={props.id}>
       <View style={{flexDirection: "row"}}>
         {props.state.headshot && <View style={{flex: 3}}>
           <Image src={props.state.headshot} alt="" style={{maxWidth: "90%", maxHeight: "90%"}} />
@@ -29,7 +29,7 @@ export default function Preview (props) {
       </View>
       <hr />
       <View style={{flexDirection: "row"}}>
-        <View style={{flex: 4, paddingRight: "1rem", borderRight: "1px solid black"}} >
+        <View style={{flex: 4, paddingRight: "1rem", borderRight: "1 solid black"}} >
           {props.state.courses.length > 0 && <figure style={{margin: "1rem auto"}}>
           <figcaption style={{textAlign: "center", marginBottom: ".5rem", fontSize: "3rem", fontWeight: 300, lineHeight: 1.2}}>Education</figcaption>
           <ul style={{listStyleType: "none"}} >
@@ -41,7 +41,7 @@ export default function Preview (props) {
                     <Text style={{fontSize: ".875rem", fontStyle: "italic"}} >{c.dates}</Text>
                  </View>
                </li>
-             ) : (<li style={{paddingVertical: "0.5rem", paddingHorizontal: "1rem", marginBottom: ".5rem", borderBottom: "1px solid gray"}} key={i}>
+             ) : (<li style={{paddingVertical: "0.5rem", paddingHorizontal: "1rem", marginBottom: ".5rem", borderBottom: "1 solid #dee2e6"}} key={i}>
               <View>
                  <Text style={{marginBottom: ".25rem"}}>{c.org}</Text>
                  <Text style={{marginBottom: ".25rem", fontWeight: "bold"}} >{c.name}</Text>
@@ -67,7 +67,7 @@ export default function Preview (props) {
           {props.state.skills.length > 0 && <figure style={{margin: "1rem auto"}}>
             <figcaption style={{textAlign: "center", marginBottom: ".5rem", fontSize: "3rem", fontWeight: 300, lineHeight: 1.2}}>Skills</figcaption>
             <ul style={{listStyleType: "none", textAlign: "center"}} >{props.state.skills.map((skill, i) => {
-              return i < props.state.skills.length - 1 ? (<li style={{paddingVertical: "0.5rem", paddingHorizontal: "1rem", marginLeft: ".5rem"}} key={i}>{skill}</li>) : (<li style={{paddingVertical: "0.5rem", paddingHorizontal: "1rem", marginLeft: ".5rem", borderBottom: "1px solid gray"}} key={i}>{skill}</li>);
+              return i < props.state.skills.length - 1 ? (<li style={{paddingVertical: "0.5rem", paddingHorizontal: "1rem", marginLeft: ".5rem"}} key={i}>{skill}</li>) : (<li style={{paddingVertical: "0.5rem", paddingHorizontal: "1rem", marginLeft: ".5rem", borderBottom: "1 solid #dee2e6"}} key={i}>{skill}</li>);
             })}</ul>
           </figure>}
           {props.state.workplaces.length > 0 && <figure style={{margin: "1rem auto"}}>
@@ -81,7 +81,7 @@ export default function Preview (props) {
                     <View style={{whiteSpace: "pre-wrap", murginBottom:".5rem"}}>{j.description}</View>
                     <Text style={{fontSize: ".875rem", fontStyle: "italic"}}>{j.dates}</Text>
                  </View>
-               </li>) : (<li style={{paddingVertical: "0.5rem", paddingHorizontal: "1rem", marginBottom: ".5rem", borderBottom: "1px solid gray"}} key={i}>
+               </li>) : (<li style={{paddingVertical: "0.5rem", paddingHorizontal: "1rem", marginBottom: ".5rem", borderBottom: "1 solid #dee2e6"}} key={i}>
                  <View>
                     <Text style={{marginBottom: ".25rem", fontStyle: "bold"}}>{j.workplace}</Text>
                     <Text style={{marginBottom: ".5rem", fontSize: "1.25rem", fontWeight: 300}}>{j.position}</Text>
