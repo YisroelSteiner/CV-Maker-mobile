@@ -219,12 +219,12 @@ export default function App () {
                   </figure>
                   <figure style={{marginVertical: "1.5rem"}} >
                     <figcaption style={{marginBottom: "1rem", fontSize:"1.25rem", fontWeight: 300}}>Skills</figcaption>
-                      {skills.length > 0 && <ul className="mb-3 list-group list-group-numbered list-group-flush">
+                      {skills.length > 0 && <ol style={{marginBottom: "1rem", listStyleType: "none", counterReset: "section"}} >
                         {skills.map((s, i) => {
-                          return (<li className="list-group-item d-flex justify-content-between align-items-start" key={i}><p className="d-inline ms-2 me-auto">{s}</p>
+                          return (<li style={{padding: "0.5rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "start"}} key={i}><p className="d-inline ms-2 me-auto">{s}</p>
                             <button className="btn btn-danger text-center" onClick={() => removeSkill(i)}>x</button>
                           </li>);})}
-                      </ul> }
+                      </ol> }
                       <div className="mb-3 row">
                         <div className="col col-sm-10"><input value={skill} onChange={e => setSkill(e.target.value)} type="text" style={styles.formControl} id="skill-input" placeholder="Add a skill" /></div>
                         <div className="col col-sm-2">
